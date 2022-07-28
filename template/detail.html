@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+
+<!-- thaotrinh.info/preview/theme-2/detail.html  2021 09:00:57 GMT -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Askbootstrap">
+    <meta name="author" content="Askbootstrap">
+    <title>Osahan Eat - Online Food Ordering Website HTML Template</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+
+    <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
+
+    <link href="vendor/select2/css/select2.min.css" rel="stylesheet">
+
+    <link href="css/osahan.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light osahan-nav shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img alt="logo" src="img/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Đăng ký <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown dropdown-cart">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-shopping-basket"></i> Giỏ hàng
+                            <span class="badge badge-success">5</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-cart-top p-0 dropdown-menu-right shadow-sm border-0">
+                            <div class="dropdown-cart-top-body border-top p-4">
+                                <p class="mb-2"><i class="icofont-ui-press text-danger food-item"></i> Chicken Tikka Sub
+                                    12" (30 cm) x 1 <span class="float-right text-secondary">314.000</span></p>
+                                <p class="mb-2"><i class="icofont-ui-press text-success food-item"></i> Corn & Peas
+                                    Salad x 1 <span class="float-right text-secondary">209.000</span></p>
+                                <p class="mb-2"><i class="icofont-ui-press text-success food-item"></i> Veg Seekh Sub 6"
+                                    (15 cm) x 1 <span class="float-right text-secondary">133.000</span></p>
+                                <p class="mb-2"><i class="icofont-ui-press text-danger food-item"></i> Chicken Tikka Sub
+                                    12" (30 cm) x 1 <span class="float-right text-secondary">314.000</span></p>
+                                <p class="mb-2"><i class="icofont-ui-press text-danger food-item"></i> Corn & Peas Salad
+                                    x 1 <span class="float-right text-secondary">209.000</span></p>
+                            </div>
+                            <div class="dropdown-cart-top-footer border-top p-4">
+                                <p class="mb-0 font-weight-bold text-secondary">Tổng tiền <span
+                                        class="float-right text-dark">499.000</span></p>
+                                <!-- <small class="text-info">Extra charges may apply</small> -->
+                            </div>
+                            <div class="dropdown-cart-top-footer border-top p-2">
+                                <a class="btn btn-success btn-block btn-lg" href="checkout.html"> Thanh toán</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="restaurant-detailed-banner">
+        <div class="text-center">
+            <img class="img-fluid cover" src="img/mall-dedicated-banner.png">
+        </div>
+        <div class="restaurant-detailed-header">
+            <div class="container">
+                <div class="row d-flex align-items-end">
+                    {divRestaurant}
+                    <div class="col-md-4">
+                        <div class="restaurant-detailed-header-right text-right">
+                            <button class="btn btn-success" type="button"><i class="icofont-clock-time"></i>${product.preparationtime}
+                            </button>
+                            <h6 class="text-white mb-0 restaurant-detailed-ratings"><span
+                                    class="generator-bg rounded text-white"><i class="icofont-star"></i> 3.1</span> 23
+                                Ratings <i class="ml-3 icofont-speech-comments"></i> 91 reviews</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="offer-dedicated-nav bg-white border-top-0 shadow-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="restaurant-detailed-action-btn float-right">
+                        <button class="btn btn-light btn-sm border-light-btn" type="button"><i
+                                class="icofont-heart text-danger"></i> Yêu thích</button>
+                        <button class="btn btn-light btn-sm border-light-btn" type="button"><i
+                                class="icofont-cauli-flower text-success"></i><a href="/restaurant?id=${product.restaurantid}">Xem cửa hàng</a></button>
+                    </span>
+                    <ul class="nav" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-order-online-tab" data-toggle="pill"
+                                href="#pills-order-online" role="tab" aria-controls="pills-order-online"
+                                aria-selected="true">Mua hàng</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" id="pills-reviews-tab" data-toggle="pill" href="#pills-reviews"
+                                role="tab" aria-controls="pills-reviews" aria-selected="false">Đánh giá & Reviews</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="offer-dedicated-body pt-2 pb-2 mt-4 mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="offer-dedicated-body-left">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-order-online" role="tabpanel"
+                                aria-labelledby="pills-order-online-tab">
+                                <div id="#menu" class="bg-white rounded shadow-sm p-4 mb-4">
+                                    <div class="address-map float-right ml-5">
+                                        <div class="mapouter">
+                                            <!-- <div class="gmap_canvas"><iframe width="300" height="170" id="gmap_canvas"
+                                                    src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=9&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                                                    frameborder="0" scrolling="no" marginheight="0"
+                                                    marginwidth="0"></iframe></div> -->
+                                            <img width="300" height="170" class="img-fluid" src="img/list/1.png">
+                                        </div>
+                                    </div>
+                                    <h5 class="mb-4">${product.productname}</h5>
+                                    <p class="mb-3">
+                                        <span class="fa fa-location-arrow locationicon"></span>${product.address}
+                                    </p>                                       
+                                    <p class="mb-2 text-black"><i class="icofont-email text-primary mr-2"></i> <a
+                                            href="https://thaotrinh.info/cdn-cgi/l/email-protection"
+                                            class="__cf_email__"
+                                            data-cfemail="97fef6faf8e4f6fff6f9d7f0faf6fefbb9f4f8fa">${product.price}</a>
+                                    </p>
+                                    <p class="mb-2 text-black"><i class="icofont-clock-time text-primary mr-2"></i>
+                                        ${product.operatingtime}
+                                    </p>
+                                    <hr class="clearfix">
+                                    <p class="text-black mb-0"> Ba mẹ cho bạc cho vàng 😳. KHÔNG BẰNG NHẬN ĐƯỢC KH ĐÁNH
+                                        5⭐️ -😍. Ace LH cho quán để sử lý đơn hàng tại số dt ở dưới 👇</p>
+                                    <hr class="clearfix">
+                                    <div
+                                        class="owl-carousel owl-theme owl-carousel-five offers-interested-carousel mb-3">
+                                        ${categiries}
+                                        <div class="item">
+                                            <div class="mall-category-item">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="img/list/2.png">
+                                                    <h6>Sandwiches</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="mall-category-item">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="img/list/3.png">
+                                                    <h6>Soups</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="mall-category-item">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="img/list/4.png">
+                                                    <h6>Pizzas</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="mall-category-item">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="img/list/5.png">
+                                                    <h6>Pastas</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="mall-category-item">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="img/list/6.png">
+                                                    <h6>Chinese</h6>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="mt-4 mb-4">Coupons</h5>
+                                    <p class="mb-3">Danh sách mã giảm giá của cửa hàng</p>
+                                    <div class="border-btn-main mb-4">
+                                        <a class="border-btn text-success mr-2" href="#"><i
+                                                class="icofont-check-circled"></i> 20% tổng đơn</a>
+                                        <a class="border-btn text-danger mr-2" href="#"><i
+                                                class="icofont-close-circled"></i> 5% tổng đơn</a>
+                                        <a class="border-btn text-success mr-2" href="#"><i
+                                                class="icofont-check-circled"></i>Giảm 27k</a>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pb-2">
+                        <div
+                            class="bg-white rounded shadow-sm text-white mb-4 p-4 clearfix restaurant-detailed-earn-pts card-icon-overlap">
+                            <img class="img-fluid float-left mr-3" src="img/earn-score-icon.png">
+                            <h6 class="pt-0 text-primary mb-1 font-weight-bold">VSATTP</h6>
+                            <p class="mb-0">Nhà hàng chứng nhận đảm bảo vệ sinh an toàn thực phẩm</p>
+                            <div class="icon-overlap">
+                                <i class="icofont-sale-discount"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="generator-bg rounded shadow-sm mb-4 p-4 osahan-cart-item">
+                        <h5 class="mb-1 text-white">Đặt hàng ngay</h5>
+                        <p class="mb-4 text-white">5 sản phẩm</p>
+                        <div class="bg-white rounded shadow-sm mb-2">
+                            <div class="gold-members p-2 border-bottom">
+                                <p class="text-gray mb-0 float-right ml-2">60.000</p>
+                                <span class="count-number float-right">
+                                    <button class="btn btn-outline-secondary  btn-sm left dec"> <i
+                                            class="icofont-minus"></i> </button>
+                                    <input class="count-number-input" type="text" value="1" readonly="">
+                                    <button class="btn btn-outline-secondary btn-sm right inc"> <i
+                                            class="icofont-plus"></i> </button>
+                                </span>
+                                <div class="media">
+                                    <div class="mr-2"><i class="icofont-ui-press text-danger food-item"></i></div>
+                                    <div class="media-body">
+                                        <p class="mt-1 mb-0 text-black">Thịt nướng</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gold-members p-2 border-bottom">
+                                <p class="text-gray mb-0 float-right ml-2">15.000</p>
+                                <span class="count-number float-right">
+                                    <button class="btn btn-outline-secondary  btn-sm left dec"> <i
+                                            class="icofont-minus"></i> </button>
+                                    <input class="count-number-input" type="text" value="1" readonly="">
+                                    <button class="btn btn-outline-secondary btn-sm right inc"> <i
+                                            class="icofont-plus"></i> </button>
+                                </span>
+                                <div class="media">
+                                    <div class="mr-2"><i class="icofont-ui-press text-success food-item"></i></div>
+                                    <div class="media-body">
+                                        <p class="mt-1 mb-0 text-black">Thêm thịt</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gold-members p-2 border-bottom">
+                                <p class="text-gray mb-0 float-right ml-2">60.000</p>
+                                <span class="count-number float-right">
+                                    <button class="btn btn-outline-secondary  btn-sm left dec"> <i
+                                            class="icofont-minus"></i> </button>
+                                    <input class="count-number-input" type="text" value="1" readonly="">
+                                    <button class="btn btn-outline-secondary btn-sm right inc"> <i
+                                            class="icofont-plus"></i> </button>
+                                </span>
+                                <div class="media">
+                                    <div class="mr-2"><i class="icofont-ui-press text-success food-item"></i></div>
+                                    <div class="media-body">
+                                        <p class="mt-1 mb-0 text-black">Thịt luộc</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gold-members p-2 border-bottom">
+                                <p class="text-gray mb-0 float-right ml-2">20.000</p>
+                                <span class="count-number float-right">
+                                    <button class="btn btn-outline-secondary  btn-sm left dec"> <i
+                                            class="icofont-minus"></i> </button>
+                                    <input class="count-number-input" type="text" value="1" readonly="">
+                                    <button class="btn btn-outline-secondary btn-sm right inc"> <i
+                                            class="icofont-plus"></i> </button>
+                                </span>
+                                <div class="media">
+                                    <div class="mr-2"><i class="icofont-ui-press text-success food-item"></i></div>
+                                    <div class="media-body">
+                                        <p class="mt-1 mb-0 text-black">Bánh đa</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gold-members p-2 border-bottom">
+                                <p class="text-gray mb-0 float-right ml-2">15.000</p>
+                                <span class="count-number float-right">
+                                    <button class="btn btn-outline-secondary  btn-sm left dec"> <i
+                                            class="icofont-minus"></i> </button>
+                                    <input class="count-number-input" type="text" value="1" readonly="">
+                                    <button class="btn btn-outline-secondary btn-sm right inc"> <i
+                                            class="icofont-plus"></i> </button>
+                                </span>
+                                <div class="media">
+                                    <div class="mr-2"><i class="icofont-ui-press text-danger food-item"></i></div>
+                                    <div class="media-body">
+                                        <p class="mt-1 mb-0 text-black">Coca chai 330ml</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2 bg-white rounded p-2 clearfix">
+                            <img class="img-fluid float-left" src="img/wallet-icon.png">
+                            <h6 class="font-weight-bold text-right mb-2">Tổng đơn: <span
+                                    class="text-danger">235.000</span> vnđ</h6>
+                            <h6 class="font-weight-bold text-right mb-2">Giảm giá: <span
+                                    class="text-danger">30.000</span> vnđ</h6>
+                            <h6 class="font-weight-bold text-right mb-2">Thanh toán: <span
+                                    class="text-danger">205.000</span> vnđ</h6>
+                            <!-- <p class="seven-color mb-1 text-right">Extra charges may apply</p> -->
+                            <p class="text-black mb-0 text-right">Tiết kiệm 30.000 vnđ</p>
+                        </div>
+                        <a href="checkout.html" class="btn btn-success btn-block btn-lg">Thanh toán <i
+                                class="icofont-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pt-5 pb-5 text-center bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5 class="m-0">Operate food store or restaurants? <a href="login.html">Work With Us</a></h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12 col-sm-12">
+                    <h6 class="mb-3">Subscribe to our Newsletter</h6>
+                    <form class="newsletter-form mb-1">
+                        <div class="input-group">
+                            <input type="text" placeholder="Please enter your email" class="form-control">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-primary">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <p><a class="text-info" href="register.html">Register now</a> to get updates on <a
+                            href="offers.html">Offers and Coupons</a></p>
+                    <div class="app">
+                        <p class="mb-2">DOWNLOAD APP</p>
+                        <a href="#">
+                            <img class="img-fluid" src="img/google.png">
+                        </a>
+                        <a href="#">
+                            <img class="img-fluid" src="img/apple.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-1 col-sm-6 mobile-none">
+                </div>
+                <div class="col-md-2 col-4 col-sm-4">
+                    <h6 class="mb-3">About OE</h6>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-4 col-sm-4">
+                    <h6 class="mb-3">For Foodies</h6>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Blogger Help</a></li>
+                        <li><a href="#">Verified Users</a></li>
+                        <li><a href="#">Code of Conduct</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-4 col-sm-4">
+                    <h6 class="mb-3">For Restaurants</h6>
+                    <ul>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Add a Restaurant</a></li>
+                        <li><a href="#">Claim your Listing</a></li>
+                        <li><a href="#">For Businesses</a></li>
+                        <li><a href="#">Owner Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-bottom-search pt-5 pb-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-black">POPULAR COUNTRIES</p>
+                    <div class="search-links">
+                        <a href="#">Australia</a> | <a href="#">Brasil</a> | <a href="#">Canada</a> | <a
+                            href="#">Chile</a> | <a href="#">Czech Republic</a> | <a href="#">India</a> | <a
+                            href="#">Indonesia</a> | <a href="#">Ireland</a> | <a href="#">New Zealand</a> | <a
+                            href="#">United Kingdom</a> | <a href="#">Turkey</a> | <a href="#">Philippines</a> | <a
+                            href="#">Sri Lanka</a> | <a href="#">Australia</a> | <a href="#">Brasil</a> | <a
+                            href="#">Canada</a> | <a href="#">Chile</a> | <a href="#">Czech Republic</a> | <a
+                            href="#">India</a> | <a href="#">Indonesia</a> | <a href="#">Ireland</a> | <a href="#">New
+                            Zealand</a> | <a href="#">United Kingdom</a> | <a href="#">Turkey</a> | <a
+                            href="#">Philippines</a> | <a href="#">Sri Lanka</a><a href="#">Australia</a> | <a
+                            href="#">Brasil</a> | <a href="#">Canada</a> | <a href="#">Chile</a> | <a href="#">Czech
+                            Republic</a> | <a href="#">India</a> | <a href="#">Indonesia</a> | <a href="#">Ireland</a> |
+                        <a href="#">New Zealand</a> | <a href="#">United Kingdom</a> | <a href="#">Turkey</a> | <a
+                            href="#">Philippines</a> | <a href="#">Sri Lanka</a> | <a href="#">Australia</a> | <a
+                            href="#">Brasil</a> | <a href="#">Canada</a> | <a href="#">Chile</a> | <a href="#">Czech
+                            Republic</a> | <a href="#">India</a> | <a href="#">Indonesia</a> | <a href="#">Ireland</a> |
+                        <a href="#">New Zealand</a> | <a href="#">United Kingdom</a> | <a href="#">Turkey</a> | <a
+                            href="#">Philippines</a> | <a href="#">Sri Lanka</a>
+                    </div>
+                    <p class="mt-4 text-black">POPULAR FOOD</p>
+                    <div class="search-links">
+                        <a href="#">Fast Food</a> | <a href="#">Chinese</a> | <a href="#">Street Food</a> | <a
+                            href="#">Continental</a> | <a href="#">Mithai</a> | <a href="#">Cafe</a> | <a href="#">South
+                            Indian</a> | <a href="#">Punjabi Food</a> | <a href="#">Fast Food</a> | <a
+                            href="#">Chinese</a> | <a href="#">Street Food</a> | <a href="#">Continental</a> | <a
+                            href="#">Mithai</a> | <a href="#">Cafe</a> | <a href="#">South Indian</a> | <a
+                            href="#">Punjabi Food</a><a href="#">Fast Food</a> | <a href="#">Chinese</a> | <a
+                            href="#">Street Food</a> | <a href="#">Continental</a> | <a href="#">Mithai</a> | <a
+                            href="#">Cafe</a> | <a href="#">South Indian</a> | <a href="#">Punjabi Food</a> | <a
+                            href="#">Fast Food</a> | <a href="#">Chinese</a> | <a href="#">Street Food</a> | <a
+                            href="#">Continental</a> | <a href="#">Mithai</a> | <a href="#">Cafe</a> | <a href="#">South
+                            Indian</a> | <a href="#">Punjabi Food</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="pt-4 pb-4 text-center">
+        <div class="container">
+            <p class="mt-0 mb-0">© Copyright 2020 Osahan Eat. All Rights Reserved</p>
+            <small class="mt-0 mb-0"> Made with <i class="fas fa-heart heart-icon text-danger"></i> by
+                <a class="text-danger" target="_blank"
+                    href="#">Gurdeep Osahan</a> - <a
+                    class="text-primary" target="_blank" href="https://thaotrinh.info/">Ask Bootstrap</a>
+            </small>
+        </div>
+    </footer>
+
+
+    <script src="vendor/jquery/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="vendor/select2/js/select2.min.js" type="text/javascript"></script>
+    <script src="vendor/owl-carousel/owl.carousel.js" type="text/javascript"></script>
+    <script src="js/custom.js" type="text/javascript"></script>
+
+</body>
+
+</html>
