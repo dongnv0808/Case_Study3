@@ -89,9 +89,16 @@ let server = http.createServer((req, res) => {
         }
         case '/createCTV':{
             if (method === 'GET') {
-                usercontroller.showFormCreateCTV(req, res);
-            }else {
-
+                userController.showFormCreateCTV(req, res);
+            }
+            break;
+        }
+        
+        case '/home/user':{
+            let query = qs.parse(urlParse.query);
+            let idUser = query.id;
+            if(method == 'GET'){
+                homeController.showHomeUser(req, res, idUser);
             }
             break;
         }
@@ -100,6 +107,7 @@ let server = http.createServer((req, res) => {
             userController.showAdminPage(req, res);
             break;
         }
+
 
         case '/admin/editUser':{
             let query = qs.parse(urlParse.query);
@@ -132,10 +140,15 @@ let server = http.createServer((req, res) => {
             break;
         }
 
-        case '/createRestaurant':{
+        case '/ctv/createRestaurant':{
             let query6 = qs.parse(urlParse.query);
             let idUser2 = query6.id;
-            restaurantController.createRestaurant(req, res, idUser2)
+            if(method == 'GET'){
+                restaurantController.showFormCreateRestaurant(req, res)
+            }else{
+                console.log(idUser2)
+                restaurantController.createNewRestaurant(req, res, idUser2)
+            }
             break;
         }
 
@@ -204,11 +217,28 @@ let server = http.createServer((req, res) => {
             }
             break;
         }
+        case '/list/search': {
+            if(method == 'GET'){
+                homeController.SearchProductByName(req, res);
+            }
+            break;
+        }
+        
         case '/detail': {
             let query = qs.parse(urlParse.query);
             let idProduct = query.id;
             if(method == 'GET'){
                 homeController.showDetail(req, res, idProduct);
+            }
+            break;
+        }
+        case '/search': {
+            let query = qs.parse(urlParse.query);
+            let nameProduct = query.name;
+            if(method == 'GET'){
+                homeController.SearchProductByName(nameProduct)
+            }else{
+                homeController.showListSearch(nameProduct)
             }
             break;
         }

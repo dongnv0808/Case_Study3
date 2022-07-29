@@ -46,7 +46,7 @@
                             <a class="nav-link" href="/register">Đăng ký <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/login">Đăng nhập <span class="sr-only"></span></a>
+                            <a class="nav-link" href="/login">Đăng xuất <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item dropdown dropdown-cart">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
@@ -98,7 +98,7 @@
                                 món ngon ưu đãi</h5>
                         </div>
                         <div class="homepage-search-form">
-                            <form class="form-noborder" method="get">
+                            <form class="form-noborder" action="/search?name=${name}" method="post">
                                 <div class="form-row">
                                     <div class="col-lg-3 col-md-3 col-sm-12 form-group">
                                         <div class="location-dropdown">

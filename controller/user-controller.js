@@ -50,7 +50,7 @@ class UserController{
                         return res.end();
                     } else if (role[0].idrole === 2) {
                         res.writeHead(301, {
-                            location: `/?id=${user.id}`
+                            location: `/home/user?id=${user.id}`
                         });
                         return res.end();
                     }

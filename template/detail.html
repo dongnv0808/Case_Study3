@@ -83,16 +83,7 @@
         <div class="restaurant-detailed-header">
             <div class="container">
                 <div class="row d-flex align-items-end">
-                    {divRestaurant}
-                    <div class="col-md-4">
-                        <div class="restaurant-detailed-header-right text-right">
-                            <button class="btn btn-success" type="button"><i class="icofont-clock-time"></i>${product.preparationtime}
-                            </button>
-                            <h6 class="text-white mb-0 restaurant-detailed-ratings"><span
-                                    class="generator-bg rounded text-white"><i class="icofont-star"></i> 3.1</span> 23
-                                Ratings <i class="ml-3 icofont-speech-comments"></i> 91 reviews</h6>
-                        </div>
-                    </div>
+                    {restaurant}
                 </div>
             </div>
         </div>
@@ -103,8 +94,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <span class="restaurant-detailed-action-btn float-right">
-                        <button class="btn btn-light btn-sm border-light-btn" type="button"><i
-                                class="icofont-heart text-danger"></i> Yêu thích</button>
                         <button class="btn btn-light btn-sm border-light-btn" type="button"><i
                                 class="icofont-cauli-flower text-success"></i><a href="/restaurant?id=${product.restaurantid}">Xem cửa hàng</a></button>
                     </span>
@@ -132,74 +121,9 @@
                             <div class="tab-pane fade show active" id="pills-order-online" role="tabpanel"
                                 aria-labelledby="pills-order-online-tab">
                                 <div id="#menu" class="bg-white rounded shadow-sm p-4 mb-4">
-                                    <div class="address-map float-right ml-5">
-                                        <div class="mapouter">
-                                            <!-- <div class="gmap_canvas"><iframe width="300" height="170" id="gmap_canvas"
-                                                    src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=9&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                                                    frameborder="0" scrolling="no" marginheight="0"
-                                                    marginwidth="0"></iframe></div> -->
-                                            <img width="300" height="170" class="img-fluid" src="img/list/1.png">
-                                        </div>
-                                    </div>
-                                    <h5 class="mb-4">${product.productname}</h5>
-                                    <p class="mb-3">
-                                        <span class="fa fa-location-arrow locationicon"></span>${product.address}
-                                    </p>                                       
-                                    <p class="mb-2 text-black"><i class="icofont-email text-primary mr-2"></i> <a
-                                            href="https://thaotrinh.info/cdn-cgi/l/email-protection"
-                                            class="__cf_email__"
-                                            data-cfemail="97fef6faf8e4f6fff6f9d7f0faf6fefbb9f4f8fa">${product.price}</a>
-                                    </p>
-                                    <p class="mb-2 text-black"><i class="icofont-clock-time text-primary mr-2"></i>
-                                        ${product.operatingtime}
-                                    </p>
-                                    <hr class="clearfix">
-                                    <p class="text-black mb-0"> Ba mẹ cho bạc cho vàng 😳. KHÔNG BẰNG NHẬN ĐƯỢC KH ĐÁNH
-                                        5⭐️ -😍. Ace LH cho quán để sử lý đơn hàng tại số dt ở dưới 👇</p>
-                                    <hr class="clearfix">
-                                    <div
-                                        class="owl-carousel owl-theme owl-carousel-five offers-interested-carousel mb-3">
-                                        ${categiries}
-                                        <div class="item">
-                                            <div class="mall-category-item">
-                                                <a href="#">
-                                                    <img class="img-fluid" src="img/list/2.png">
-                                                    <h6>Sandwiches</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="mall-category-item">
-                                                <a href="#">
-                                                    <img class="img-fluid" src="img/list/3.png">
-                                                    <h6>Soups</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="mall-category-item">
-                                                <a href="#">
-                                                    <img class="img-fluid" src="img/list/4.png">
-                                                    <h6>Pizzas</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="mall-category-item">
-                                                <a href="#">
-                                                    <img class="img-fluid" src="img/list/5.png">
-                                                    <h6>Pastas</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="mall-category-item">
-                                                <a href="#">
-                                                    <img class="img-fluid" src="img/list/6.png">
-                                                    <h6>Chinese</h6>
-                                                </a>
-                                            </div>
-                                        </div>
+                                    {productdetail}
+                                    <div class="owl-carousel owl-theme owl-carousel-five offers-interested-carousel mb-3">
+                                        {categiries}
                                     </div>
                                     <h5 class="mt-4 mb-4">Coupons</h5>
                                     <p class="mb-3">Danh sách mã giảm giá của cửa hàng</p>

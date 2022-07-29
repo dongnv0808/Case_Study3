@@ -163,7 +163,7 @@
     </div>
             <!-- LOGO -->
             <div class="logo-box">
-                <a href="index.html" class="logo logo-dark text-center">
+                <a href="/" class="logo logo-dark text-center">
                             <span class="logo-sm">
                                 <img src="../assets/images/logo-sm.png" alt="" height="22">
                                 <!-- <span class="logo-lg-text-light">UBold</span> -->
@@ -174,7 +174,7 @@
                             </span>
                 </a>
 
-                <a href="index.html" class="logo logo-light text-center">
+                <a href="/" class="logo logo-light text-center">
                             <span class="logo-sm">
                                 <img src="../assets/images/logo-sm.png" alt="" height="22">
                             </span>
@@ -242,28 +242,7 @@
 
                 <ul id="side-menu">
                     <li class="menu-title mt-2">Quản lý</li>
-
-                    <li>
-                        <a href="/ctv/product?id={iduser}">
-                            <i data-feather="calendar"></i>
-                            <span> Quản Lý Món ăn </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ctv/restaurant?id={iduser}">
-                            <i data-feather="calendar"></i>
-                            <span> Quản Lý Nhà hàng </span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="apps-social-feed.html">
-                            <span class="badge badge-pink float-right">Hot</span>
-                            <i data-feather="rss"></i>
-                            <span> Mãi Khuyến Mãi </span>
-                        </a>
-                    </li>
-
+                    {divCategory}
                 </ul>
             </div>
             <!-- End Sidebar -->
@@ -275,12 +254,7 @@
 
     </div>
 
-</div>
-
 <div class="table-clod" id="container mt-3">
-    <div class="table">
-
-    </div>
     <a href="/ctv/create" class="btn btn-info">Thêm mới</a>
     <table class="table" id="render">
         <tr>

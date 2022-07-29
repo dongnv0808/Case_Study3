@@ -24,7 +24,7 @@ class Product{
     }
     getProductHome(){
         return new Promise((resolve, rejects) => {
-            this.connection.query('select p.name, p.image, p.price, p.preparationtime, c.name as namecategory, r.address from product p join category c on p.idcategory = c.id join restaurant r on r.id = c.idrestaurant group by p.idcategory;', (err, data) => {
+            this.connection.query('select p.id as idproduct, p.name as productname, p.image as productimage, p.price, p.preparationtime, c.name as namecategory, r.address from product p join category c on p.idcategory = c.id join restaurant r on r.id = c.idrestaurant group by p.idcategory;', (err, data) => {
                 if(err){
                     rejects(err);
                 } else {
@@ -44,9 +44,10 @@ class Product{
             });
         });
     }
-    getProduct(){
+
+    getProductByNameProduct(name){
         return new Promise((resolve, rejects) => {
-            this.connection.query('select *, p.name as nameproduct, p.image as productimage, p.image as productimage, c.id as idcategory, c.name as namecategory, r.id as idrestaurant, r.name as namecategory from product p join category c on p.idcategory = c.id join restaurant r on r.id = c.idrestaurant group by p.id;', (err, data) => {
+            this.connection.query(`select p.id, p.name as nameproduct, p.image as productimage, p.price, p.preparationtime, c.name as namecategory, r.address from product p join category c on p.idcategory = c.id join restaurant r on r.id = c.idrestaurant where p.nameproduct=${name};`, (err, data) => {
                 if(err){
                     rejects(err);
                 } else {
@@ -55,9 +56,10 @@ class Product{
             });
         });
     }
+    
     getProductDetail(id){
         return new Promise((resolve, rejects) => {
-            this.connection.query(`select p.name as productname, r.address, p.preparationtime, r.name as restaurantname, r.operatingtime, c.image as imagecategory, c.name as categoryname, t.slug from product p join category c on p.idcategory = c.id join restaurant r on r.id = c.idrestaurant join tag t on p.idtag = t.id where p.id=${id};`, (err, data) => {
+            this.connection.query(`select p.name as productname, p.image , r.address, p.preparationtime, p.price, r.name as restaurantname, r.operatingtime, c.id as categoryid, c.image as imagecategory, c.name as categoryname, t.slug from product p join category c on p.idcategory = c.id join restaurant r on r.id = c.idrestaurant join tag t on p.idtag = t.id where p.id=${id};`, (err, data) => {
                 if(err){
                     rejects(err);
                 } else {
@@ -150,6 +152,18 @@ class Product{
                 });
                 return res.end();
             }
+        })
+    }
+    SearchProductByName(name) {
+        return new Promise((resolve, reject) => {
+            let insertQuery = `select p.id, p.name as nameproduct, p.image as productimage, p.price, p.preparationtime, c.name as namecategory, r.address from product p join category c on p.idcategory = c.id join restaurant r on r.id = c.idrestaurant where p.name like '%${name}%' group by p.id;`;
+            this.connection.query(insertQuery, (err, data) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(data);
+                }
+            });
         })
     }
 };
